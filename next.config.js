@@ -4,6 +4,14 @@ const nextConfig = {
   images: {
     domains: ['i.pravatar.cc'],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        destination: 'https://bunny-chat.vercel.app/',
+      },
+    ];
+  },
 };
 
 const withPWA = require('next-pwa');
